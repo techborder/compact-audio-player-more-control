@@ -128,3 +128,7 @@
 #sm2-container.high_performance.swf_timedout {
  z-index: 99; /* try to stay on top */
 }
+
+#sm2-container {
+	bottom: 0px;
+}
