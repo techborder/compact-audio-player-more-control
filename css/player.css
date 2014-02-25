@@ -8,7 +8,8 @@
 }
 
 .sc_player_container1 .myButton_play {
-	background: transparent url(../image/play-sound.png) no-repeat !important;
+	background: url(../image/play-sound.png) no-repeat 0 0;
+	/*background-position: 0 -22px;*/
 	cursor: pointer !important;
 	height: 22px;
 	width: 22px;
@@ -19,7 +20,7 @@
 }
 
 .sc_player_container1 .myButton_stop {
-	background: transparent url(../image/pause-sound.png) no-repeat !important;
+	background: url(../image/pause-sound.png) no-repeat;
 	cursor: pointer !important;
 	height: 22px;
 	width: 22px;
@@ -27,6 +28,15 @@
 	position: relative;
 	margin: 0 !important;
 	padding: 0 !important;
+}
+
+.sc_player_container1 .myButton_stop {
+	text-decoration:none;
+}
+
+.sc_player_container1 .myButton_stop:hover,
+.sc_player_container1 .myButton_play:hover {
+	background-position: 0 -22px;
 }
 
 .sc_player_container2 {
