@@ -169,44 +169,24 @@ function capmc_mp3_player_admin_menu() {
 }
 
 function capmc_mp3_options() 
-{
-		$options = array (
-		// Set the array with all the theme options
-		array(
-			"desc" => "<h3>General Settings</h3>",
-			"type" => "title"),
-		array( "name" => "Logo URL:",
-			"desc" => "Enter the URL of your logo image",
-			"id" => $shortname."_logo_url",
-			"type" => "text",
-			"std" => ""),
-		array( "name" => "Custom Favicon",
-			"desc" => "Paste the full URL of Png/Gif image that will represent your website’s favicon (16px x 16px) ",
-			"id" => $shortname."_custom_favicon",
-			"type" => "text",
-			"std" => get_bloginfo(‘url’) ."/favicon.ico"),
-		array( "name" => "Remove Sidebar Tabs",
-			"desc" => "Check this box if you wish to remove the sidebar tabs.",
-			"id" => $shortname."_not_tabs",
-			"std" => "false",
-			"type" => "checkbox"),
-	);	
-	
-	
+{	
 	echo '<div class="wrap">';
 	echo '<div id="poststuff"><div id="post-body">';
 	echo '<div id="icon-upload" class="icon32"><br></div><h2>Compact Audio Player More Control</h2>';
 	
-	echo '<div style="background: #FFF6D5; border: 1px solid #D1B655; color: #3F2502; padding: 15px 10px">Visit the <a href="http://www.tipsandtricks-hq.com/wordpress-audio-music-player-plugin-4556" target="_blank">Compact Audio Player</a> plugin page for documentation and update.</div>';
-	echo "<p>This is a Simple All Browser Supported Audio Player. There is no extra settings. Just add the shortcode with the MP3 file URL in a WordPress post or page to embed the audio player.</p>";
+	echo '<div style="background: #FFF6D5; border: 1px solid #D1B655; color: #3F2502; padding: 15px 10px">Visit the <a href="http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control" target="_blank">Compact Audio Player More Control</a> plugin page for more documentation.</div>';
+	echo "<p>This is a simple all browser supported audio player based on Compact Audio Player. There are extra settings if you want to use them. You can just add the shortcode with the MP3 file URL in a WordPress post or page to embed the audio player.</p>";
 	echo "<h3>Shortcode Format</h3>";
 	echo '<p><code>[capmc_embed_player fileurl="URL OF THE MP3 FILE"]</code></p>';	
 	echo '<p><strong>Example:</strong></p>';
 	echo '<p><code>[capmc_embed_player fileurl="http://www.example.com/wp-content/uploads/my-music/mysong.mp3"]</code></p>';
-	
+	echo "<p>For even more control, go to the website above to learn how to add it to your theme and control the audio player with the settings below.</p>";
+
+		
 	if(isset($_POST['capmc_player_settings'])){
 		update_option('capmc_audio_disable_simultaneous_play', isset($_POST["capmc_audio_disable_simultaneous_play"])?'1':'');
 		update_option('capmc_audio_file', isset($_POST["capmc_audio_file"])?$_POST["capmc_audio_file"]:'');
+		update_option('capmc_autoplay', isset($_POST["capmc_autoplay"])?'1':'');
 	}
 		
 	?>
@@ -230,6 +210,13 @@ function capmc_mp3_options()
     </td><td align="left">    
     <input name="capmc_audio_file" type="text" <?php if(get_option('capmc_audio_file')!='') echo ' value="'. get_option('capmc_audio_file') . '"'; ?> />
     <br /><p class="description">File to be played.</p>
+    </td></tr>
+
+    <tr valign="top"><td width="25%" align="left">
+    Autoplay: 
+    </td><td align="left">    
+    <input name="capmc_autoplay" type="checkbox"<?php if(get_option('capmc_autoplay')!='') echo ' checked="checked"'; ?> value="1"/>
+    <br /><p class="description">Automatically play the audio when a visitor comes to your site. Does not work for iOS devices (Apple doesn't allow it).</p>
     </td></tr>
     
     </table>	
