@@ -165,14 +165,14 @@ add_filter('the_excerpt', 'do_shortcode',11);
 //Create admin page 
 add_action('admin_menu', 'capmc_mp3_player_admin_menu');
 function capmc_mp3_player_admin_menu() {
-	add_options_page('C Audio Player MC', 'C Audio Player More Control', 8, __FILE__, 'capmc_mp3_options');
+	add_options_page('C Audio Player More Control', 'C Audio Player MC', 8, __FILE__, 'capmc_mp3_options');
 }
 
 function capmc_mp3_options() 
 {
 	echo '<div class="wrap">';
 	echo '<div id="poststuff"><div id="post-body">';
-	echo '<div id="icon-upload" class="icon32"><br></div><h2>SC Audio Player</h2>';
+	echo '<div id="icon-upload" class="icon32"><br></div><h2>Compact Audio Player More Control</h2>';
 	
 	echo '<div style="background: #FFF6D5; border: 1px solid #D1B655; color: #3F2502; padding: 15px 10px">Visit the <a href="http://www.tipsandtricks-hq.com/wordpress-audio-music-player-plugin-4556" target="_blank">Compact Audio Player</a> plugin page for documentation and update.</div>';
 	echo "<p>This is a Simple All Browser Supported Audio Player. There is no extra settings. Just add the shortcode with the MP3 file URL in a WordPress post or page to embed the audio player.</p>";
