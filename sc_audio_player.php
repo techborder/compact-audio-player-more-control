@@ -170,6 +170,29 @@ function capmc_mp3_player_admin_menu() {
 
 function capmc_mp3_options() 
 {
+		$options = array (
+		// Set the array with all the theme options
+		array(
+			"desc" => "<h3>General Settings</h3>",
+			"type" => "title"),
+		array( "name" => "Logo URL:",
+			"desc" => "Enter the URL of your logo image",
+			"id" => $shortname."_logo_url",
+			"type" => "text",
+			"std" => ""),
+		array( "name" => "Custom Favicon",
+			"desc" => "Paste the full URL of Png/Gif image that will represent your website’s favicon (16px x 16px) ",
+			"id" => $shortname."_custom_favicon",
+			"type" => "text",
+			"std" => get_bloginfo(‘url’) ."/favicon.ico"),
+		array( "name" => "Remove Sidebar Tabs",
+			"desc" => "Check this box if you wish to remove the sidebar tabs.",
+			"id" => $shortname."_not_tabs",
+			"std" => "false",
+			"type" => "checkbox"),
+	);	
+	
+	
 	echo '<div class="wrap">';
 	echo '<div id="poststuff"><div id="post-body">';
 	echo '<div id="icon-upload" class="icon32"><br></div><h2>Compact Audio Player More Control</h2>';
@@ -183,7 +206,9 @@ function capmc_mp3_options()
 	
 	if(isset($_POST['capmc_player_settings'])){
 		update_option('capmc_audio_disable_simultaneous_play', isset($_POST["capmc_audio_disable_simultaneous_play"])?'1':'');
+		update_option('capmc_audio_file', isset($_POST["capmc_audio_file"])?$_POST["capmc_audio_file"]:'');
 	}
+		
 	?>
     <form method="post" action="<?php echo $_SERVER["REQUEST_URI"]; ?>">
 
@@ -198,6 +223,13 @@ function capmc_mp3_options()
     </td><td align="left">    
     <input name="capmc_audio_disable_simultaneous_play" type="checkbox"<?php if(get_option('capmc_audio_disable_simultaneous_play')!='') echo ' checked="checked"'; ?> value="1"/>
     <br /><p class="description">Check this option if you only want to allow one audio file to be played at a time (helpful if you have multiple audio files on a page). It will automatically stop the audio file that is currently playing when a user plays a new file.</p>
+    </td></tr>
+	
+    <tr valign="top"><td width="25%" align="left">
+    Audio File: 
+    </td><td align="left">    
+    <input name="capmc_audio_file" type="text" <?php if(get_option('capmc_audio_file')!='') echo ' value="'. get_option('capmc_audio_file') . '"'; ?> />
+    <br /><p class="description">File to be played.</p>
     </td></tr>
     
     </table>	
