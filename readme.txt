@@ -1,4 +1,4 @@
-=== Compact Audio Player More Control ===
+= Compact Audio Player More Control =
 Contributors: Tips and Tricks HQ, Techborder
 Tags: audio, audio player, embed, media, media player, mp3, mp3 player, music, music player, player, podcast, sound
 Requires at least: 3.0
