@@ -1,4 +1,4 @@
-= Compact Audio Player More Control =
+== Compact Audio Player More Control ==
 Contributors: Tips and Tricks HQ, Techborder
 Tags: audio, audio player, embed, media, media player, mp3, mp3 player, music, music player, player, podcast, sound
 Requires at least: 3.0
@@ -55,11 +55,11 @@ v0.0
 
 See http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control.
 
-= Download =
+== Download ==
 
 On github: https://github.com/techborder/compact-audio-player-more-control.git.
 
-= Configuration =
+== Configuration ==
 
 Once the code has been added to your theme, set your File URL (audio file) in Dashboard > Settings > C Audio Player MC.
 
@@ -72,7 +72,7 @@ Loop.
 Auto-play.
 If given as attributes in the shortcode capmc_embed_player_settings, they will be ignored and overridden by the settings in the Dashboard.
 
-= Pass-through attributes =
+== Pass-through attributes ==
 
 Just as in Compact Audio Player, you can still control attributes of volume and CSS class through the shortcode capmc_embed_player_settings.
 
@@ -85,17 +85,17 @@ Just as in Compact Audio Player, you can still control attributes of volume and 
  1. volume.
  2. class.
 
-= License =
+== License ==
 
 GPLv3
 
-= Details =
+== Details ==
 
 Even though the icon shows a mute button, the action that takes place is not muting the volume but stopping the audio file from playing. A couple reasons for this:
 
   * Most visitors that do not want any sound so their first instinct is to go for the mute button.
   * Many times there is already a photo gallery slider control that uses the play and pause symbol. Adding another play and pause icon would confuse the visitor.
 
-= Support =
+== Support ==
 
 Code is free under GPLv3. Support is provided for a fee as a consulting service - Contact to hire us.
