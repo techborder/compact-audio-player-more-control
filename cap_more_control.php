@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: Compact Audio Player More Control
-Description: Plays a specified audio file (.mp3 or .ogg) using a simple and compact audio player. The audio player is compatible with all major browsers and devices (Android, iPhone). Customized with smaller icons, and in the future, more control via the Dashboard. Based on Compact Audtio Player 1.7.
+Description: Plays a specified audio file (.mp3 or .ogg) using a simple and compact audio player. The audio player is compatible with all major browsers and devices (Android, iPhone). Customized with smaller icons, and more control via the Dashboard. Based on Compact WP Audio Player 1.7. See http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control for instructons.
 Version: 0.0
-Author: Most credit to Tips and Tricks HQ (http://www.tipsandtricks-hq.com/). Customized by Techborder.
+Author: Tips and Tricks HQ (http://www.tipsandtricks-hq.com/). Techborder.
 Author URI: http://www.techborder.com
 License: GPL3  
 */
