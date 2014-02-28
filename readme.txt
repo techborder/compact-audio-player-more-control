@@ -1,10 +1,9 @@
 === Compact WP Audio Player ===
-Contributors: Tips and Tricks HQ
-Donate link: http://www.tipsandtricks-hq.com/development-center
+Contributors: Tips and Tricks HQ, Techborder
 Tags: audio, audio player, embed, media, media player, mp3, mp3 player, music, music player, player, podcast, sound
 Requires at least: 3.0
 Tested up to: 3.8
-Stable tag: 1.7
+Stable tag: 0.1 
 License: GPLv2 or later
 
 A Compact WP Audio Player Pluign that is compatible with all major browsers and devices (Android, iPhone, iPad)
