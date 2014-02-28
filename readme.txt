@@ -1,4 +1,4 @@
-=== Compact WP Audio Player ===
+=== Compact Audio Player More Control ===
 Contributors: Tips and Tricks HQ, Techborder
 Tags: audio, audio player, embed, media, media player, mp3, mp3 player, music, music player, player, podcast, sound
 Requires at least: 3.0
@@ -6,11 +6,11 @@ Tested up to: 3.8
 Stable tag: 0.1 
 License: GPLv2 or later
 
-A Compact WP Audio Player Pluign that is compatible with all major browsers and devices (Android, iPhone, iPad)
+A compact audio player that is compatible with all major browsers and devices (Android, iPhone, iPad)
 
 == Description ==
 
-Compact WordPress Audio Player plugin is an HTML5 + Flash hybrid based wordpress plugin which can be used to embed an mp3 audio file on your WordPress post or page using a shortcode. The audio player is cute and compact and will play on all major browsers. 
+Similar to Compact WP Audio Player but with more settings in the Dashboard, this means after you setup your theme, you can easily change the audio file or auto-play settings in the WordPress Dashboard.
 
 This audio player plugin Supports .mp3 and .ogg file formats
 
@@ -23,29 +23,23 @@ This audio player plugin Supports .mp3 and .ogg file formats
 * Add the audio player to any post/page using shortcode
 * Use autoplay option to play an audio/mp3 file as soon as the page loads
 
-http://www.youtube.com/watch?v=4eBIPqfZiss
-
-More details can be found on the [Compact Audio Player Plugin Page](http://www.tipsandtricks-hq.com/wordpress-audio-music-player-plugin-4556)
+More details can be found on the [Compact Audio Player More Control plugin page](http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control)
 
 == Installation ==
 
-1. Upload the "sc_audio_player.zip" file via the WordPress's plugin uploader (Plugins -> Add New -> Upload)
+1. Upload the "cap_more_control.zip" file via the WordPress's plugin uploader (Plugins -> Add New -> Upload)
 2. Activate the plugin through the "Plugins" menu in Wordpress.
-3. Create a page or post to show the player using shortcode. 
-4. Add shortcode anywhere in the post/page like: [sc_embed_player fileurl="mp3 file url"]
+3. Update the File URL in Dashboard settings (in Dashboard > Settings > C Audio Player MC).
+4. Create a page or post to show the player using shortcode. 
+5. Add shortcode anywhere in the post/page like: [capmc_embed_player_settings]
 
 == Usage ==
-Use the following shortcode to embed an audio file anywhere on your site
 
-[sc_embed_player fileurl="URL OF THE MP3 FILE"]
-
-Example shortcode:
-
-[sc_embed_player fileurl="http://www.example.com/wp-content/uploads/my-music/mysong.mp3"]
+See http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control.
 
 == Screenshots ==
 Visit the following page for screenshots
-http://www.tipsandtricks-hq.com/wordpress-audio-music-player-plugin-4556
+http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control.
 
 == Frequently Asked Questions ==
 None
@@ -55,16 +49,53 @@ None
 
 == Changelog ==
 
-1.7 - WordPress 3.8 compatibility
+v0.0
 
-1.6 - Added an option to disable simultaneous playback. It will automatically stop the audio file that is currently playing when a user plays a new file. 
+= How to add to your theme =
 
-1.5 - added a auto loop parameter option in the shortcode to automatically loop the audio file
+See http://www.techborder.com/wordpress-plugin-compact-audio-player-more-control.
 
-1.4 - added a volume parameter option in the shortcode so you can specify the volume of the audio
+= Download =
 
-1.3 - Added the autoplay option in the shortcode.
+On github: https://github.com/techborder/compact-audio-player-more-control.git.
 
-1.2 - added the ability to spcify a container class via the shortcode (helpful for CSS customization)
+= Configuration =
 
-1.1 - minor javascript bug fix
+Once the code has been added to your theme, set your File URL (audio file) in Dashboard > Settings > C Audio Player MC.
+
+In the settings, in Audio File, add full URL to the song or audio.
+
+== Settings controlled in Dashboard ==
+
+Audio file (File URL).
+Loop.
+Auto-play.
+If given as attributes in the shortcode capmc_embed_player_settings, they will be ignored and overridden by the settings in the Dashboard.
+
+= Pass-through attributes =
+
+Just as in Compact Audio Player, you can still control attributes of volume and CSS class through the shortcode capmc_embed_player_settings.
+
+<?php
+    echo do_shortcode('[capmc_embed_player_settings volume="90"]');
+?>
+
+== Pass-through shortcode attributes ==
+
+ 1. volume.
+ 2. class.
+
+= License =
+
+GPLv3
+
+= Details =
+
+Even though the icon shows a mute button, the action that takes place is not muting the volume but stopping the audio file from playing. A couple reasons for this:
+
+  * Most visitors that do not want any sound so their first instinct is to go for the mute button.
+  * Many times there is already a photo gallery slider control that uses the play and pause symbol. Adding another play and pause icon would confuse the visitor.
+
+= Support =
+
+Code is free under GPLv3. Support is provided for a fee as a consulting service - Contact to hire us.
