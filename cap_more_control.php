@@ -263,13 +263,6 @@ function capmc_mp3_options()
 	
 	<table class="form-table">
 	
-	<tr valign="top"><td width="25%" align="left">
-	Disable Simultaneous Play: 
-	</td><td align="left">    
-	<input name="capmc_audio_disable_simultaneous_play" type="checkbox"<?php if(get_option('capmc_audio_disable_simultaneous_play')!='') echo ' checked="checked"'; ?> value="1"/>
-	<br /><p class="description">Check this option if you only want to allow one audio file to be played at a time (helpful if you have multiple audio files on a page). It will automatically stop the audio file that is currently playing when a user plays a new file.</p>
-	</td></tr>
-	
 	<tr valign="top"><td width="25%" align="left"><label for="capmc_file_url">
 	File URL:
 	</label>
@@ -290,6 +283,13 @@ function capmc_mp3_options()
 	</label></td><td align="left">    
 	<input name="capmc_loop" id="capmc_loop" type="checkbox"<?php if(get_option('capmc_loop')!='') echo ' checked="checked"'; ?> value="1"/>
 	<br /><p class="description">If checked, then repeat audio file.</p>
+	</td></tr>
+	
+	<tr valign="top"><td width="25%" align="left">
+	Disable Simultaneous Play: 
+	</td><td align="left">    
+	<input name="capmc_audio_disable_simultaneous_play" type="checkbox"<?php if(get_option('capmc_audio_disable_simultaneous_play')!='') echo ' checked="checked"'; ?> value="1"/>
+	<br /><p class="description">Legacy feature if using Compact WP Audio Player shortcode. Check this option if you only want to allow one audio file to be played at a time (helpful if you have multiple audio files on a page). It will automatically stop the audio file that is currently playing when a user plays a new file.</p>
 	</td></tr>
 	
 	</table>

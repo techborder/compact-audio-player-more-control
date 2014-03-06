@@ -6,7 +6,7 @@ Tested up to: 3.8
 Stable tag: 0.1 
 License: GPLv2 or later
 
-A compact audio player that is compatible with all major browsers and devices (Android, iPhone, iPad)
+Navigate to Dashboard > Settings to control. A compact audio player that is compatible with all major browsers and devices (Android, iPhone, iPad). 
 
 == Description ==
 
