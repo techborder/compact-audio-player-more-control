@@ -141,11 +141,17 @@ function capmc_embed_player_settings_handler($atts, $content = null)
 		} // else Use default value.
 	} // else Option is not set. Use default value.
 	
+	if( get_option('capmc_loop', "true") ) {
+		$loop_attr = "true";
+	} else {
+		$loop_attr = "false";
+	}
+	
 	echo do_shortcode('[capmc_embed_player '
 			. $autoplay_attr .' '
 			. $class_attr .' '
 			. $volume_attr
-			. ' loops="'. get_option('capmc_loop', "true")
+			. ' loops="'. $loop_attr
 			. '" fileurl="'. $fileurl
 			. '"]'
 		);
@@ -286,7 +292,7 @@ function capmc_mp3_options()
 	<br /><p class="description">If checked, then repeat audio file.</p>
 	</td></tr>
 	
-	</table>	
+	</table>
 	
 	<div class="submit">
 	<input type="submit" class="button-primary" name="capmc_player_settings" value="<?php _e('Update'); ?>" />
@@ -297,6 +303,7 @@ function capmc_mp3_options()
 	</form>
 
 	<?php
-	echo '</div></div>';//end of post-stuff  
-	echo '</div>';//end of wrap    		
+	echo '</div></div>';
+	echo '</div>';//end of wrap
 }
+?>
