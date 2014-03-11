@@ -5,10 +5,11 @@
 
 .sc_player_container1 {
 	display: inline;
+	/*margin: -6px 0px 0px 0px;*/
+	margin: 0;
 	cursor: pointer;
 	border: none;
 	position: relative;
-	margin: 0;
 	padding: 0;
 }
 
@@ -34,8 +35,65 @@
 	padding: inherit;
 }
 
+/*.bot-home a.go.prev{
+	margin:-2px 0px 0 3px;
+	height: 22px;
+	width:22px;
+	background: url(../images/prev.png) no-repeat 0 0;
+}
+*/
+
 /* On mouse-over, gives the affect that the icon has changed. */
 .sc_player_container1 .myButton_stop:hover,
 .sc_player_container1 .myButton_play:hover {
 	background-position: 0 -22px;
 }
+
+
+/*@media all and (max-device-width: 480px),*/
+/*all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait),*/
+/*all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape),*/
+/*all and (min-device-width: 1025px) {*/
+/*	margin: -6px 0px 0px 0px;*/
+/*}*/
+
+/* iPad Portrait */
+@media screen and (min-device-width: 481px) and (orientation:portrait) {
+	.sc_player_container1 {
+		margin: -6px 0px 0px 0px;
+	}
+}
+
+/*/* Non-Retina */*/
+/*@media screen and (-webkit-max-device-pixel-ratio: 1) {*/
+/*	margin: -6px 0px 0px 0px;*/
+/*}*/
+/**/
+/**/
+/* Retina */
+/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),*/
+/*only screen and (-o-min-device-pixel-ratio: 3/2),*/
+/*only screen and (min--moz-device-pixel-ratio: 1.5),*/
+/*only screen and (min-device-pixel-ratio: 1.5) {*/
+/*	.sc_player_container1 {*/
+/*		margin: -6px 0px 0px 0px;*/
+/*	}*/
+/*}*/
+/**/
+/*/* iPhone Portrait */*/
+/*@media screen and (max-device-width: 480px) and (orientation:portrait) {*/
+/*} */
+/**/
+/*/* iPhone Landscape */*/
+/*@media screen and (max-device-width: 480px) and (orientation:landscape) {*/
+/*}*/
+/**/
+/*/* iPad Portrait */*/
+/*@media screen and (min-device-width: 481px) and (orientation:portrait) {*/
+/*}*/
+/**/
+/*/* iPad Landscape */*/
+/*@media screen and (min-device-width: 481px) and (orientation:landscape) {*/
+/*}*/
+/**/
+/*/*body { -webkit-text-size-adjust: none; }*/*/
