@@ -4,7 +4,9 @@
 }
 
 .sc_player_container1 {
-	display: inline;
+	display: inline-block;
+	height: 22px;
+	width: 22px;
 	/*margin: -6px 0px 0px 0px;*/
 	margin: 0;
 	cursor: pointer;
@@ -14,25 +16,29 @@
 }
 
 .sc_player_container1 .myButton_play {
-	background: url(../image/play-sound.png) no-repeat 0 0;
 	height: 22px;
+	line-height: 22px;
 	width: 22px;
-	cursor: inherit;
-	border: inherit;
-	position: inherit;
-	margin: inherit;
-	padding: inherit;
+	margin: 0;
+	cursor: pointer;
+	border: none;
+	position: relative;
+	padding: 0;
+	vertical-align: baseline;
+	background: url(../image/play-sound.png) no-repeat 0 0px;
 }
 
 .sc_player_container1 .myButton_stop {
-	background: url(../image/pause-sound.png) no-repeat;
 	height: 22px;
 	width: 22px;
-	cursor: inherit;
-	border: inherit;
-	position: inherit;
-	margin: inherit;
-	padding: inherit;
+	line-height: 22px;
+	margin: 0;
+	cursor: pointer;
+	border: none;
+	position: relative;
+	padding: 0;
+	vertical-align: baseline;
+	background: url(../image/pause-sound.png) no-repeat 0 0px;
 }
 
 /*.bot-home a.go.prev{
@@ -49,51 +55,3 @@
 	background-position: 0 -22px;
 }
 
-
-/*@media all and (max-device-width: 480px),*/
-/*all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait),*/
-/*all and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape),*/
-/*all and (min-device-width: 1025px) {*/
-/*	margin: -6px 0px 0px 0px;*/
-/*}*/
-
-/* iPad Portrait */
-@media screen and (min-device-width: 481px) and (orientation:portrait) {
-	.sc_player_container1 {
-		margin: -6px 0px 0px 0px;
-	}
-}
-
-/*/* Non-Retina */*/
-/*@media screen and (-webkit-max-device-pixel-ratio: 1) {*/
-/*	margin: -6px 0px 0px 0px;*/
-/*}*/
-/**/
-/**/
-/* Retina */
-/*@media only screen and (-webkit-min-device-pixel-ratio: 1.5),*/
-/*only screen and (-o-min-device-pixel-ratio: 3/2),*/
-/*only screen and (min--moz-device-pixel-ratio: 1.5),*/
-/*only screen and (min-device-pixel-ratio: 1.5) {*/
-/*	.sc_player_container1 {*/
-/*		margin: -6px 0px 0px 0px;*/
-/*	}*/
-/*}*/
-/**/
-/*/* iPhone Portrait */*/
-/*@media screen and (max-device-width: 480px) and (orientation:portrait) {*/
-/*} */
-/**/
-/*/* iPhone Landscape */*/
-/*@media screen and (max-device-width: 480px) and (orientation:landscape) {*/
-/*}*/
-/**/
-/*/* iPad Portrait */*/
-/*@media screen and (min-device-width: 481px) and (orientation:portrait) {*/
-/*}*/
-/**/
-/*/* iPad Landscape */*/
-/*@media screen and (min-device-width: 481px) and (orientation:landscape) {*/
-/*}*/
-/**/
-/*/*body { -webkit-text-size-adjust: none; }*/*/
